@@ -22,22 +22,7 @@ EnemyScript uses protected access modifiers for members like Rigidbody2D, Animat
 ### Overriding Methods:
 While not explicitly shown in this example, you can override methods in the derived class to provide specific implementations. For instance, EnemyFind could override a method from EnemyScript if it needed different behavior.
 
-+-----------------+ +-----------------+
-| EnemyScript | | EnemyFind |
-+-----------------+ +-----------------+
-| - Rigidbody2D | | - isVisible |
-| - Animator | | - player |
-| - speed | | - posPlayer |
-| - MaxHealth | | - rangeXToActivate |
-| - damage | | - rangeYToActivate |
-+-----------------+ +-----------------+
-| + Start() | | + search() |
-| + Update() | +-----------------+
-| + FixedUpdate() |
-| + Hit() |
-| + Die() |
-+-----------------+
-
+![image](https://github.com/Yceballos/C-Sharp-Herency-work-Unity/assets/90511756/a870cdc7-30f9-49d6-9273-90be4c02ca68)
 
 ### Calling Base Class Methods:
 You can call base class methods using the base keyword if you need to extend or modify the behavior of inherited methods without completely replacing them. Other way to see how Inheritance works:
