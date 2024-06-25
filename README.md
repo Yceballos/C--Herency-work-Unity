@@ -22,27 +22,20 @@ EnemyScript uses protected access modifiers for members like Rigidbody2D, Animat
 ### Overriding Methods:
 While not explicitly shown in this example, you can override methods in the derived class to provide specific implementations. For instance, EnemyFind could override a method from EnemyScript if it needed different behavior.
 
-+-----------------+                       +-----------------+
-|   EnemyScript   |                       |    EnemyFind    |
-+-----------------+                       +-----------------+
-| - Rigidbody2D   |                       | - isVisible     |
-| - Animator      |                       | - player        |
-| - speed         |                       | - posPlayer     |
-| - MaxHealth     |                       | - rangeXToActivate |
-| - damage        |                       | - rangeYToActivate |
-+-----------------+                       +-----------------+
-| + Start()       |                       | + search()      |
-| + Update()      |                       +-----------------+
++-----------------+ +-----------------+
+| EnemyScript | | EnemyFind |
++-----------------+ +-----------------+
+| - Rigidbody2D | | - isVisible |
+| - Animator | | - player |
+| - speed | | - posPlayer |
+| - MaxHealth | | - rangeXToActivate |
+| - damage | | - rangeYToActivate |
++-----------------+ +-----------------+
+| + Start() | | + search() |
+| + Update() | +-----------------+
 | + FixedUpdate() |
-| + Hit()         |
-| + Die()         |
-+-----------------+
-
-           ^ Inherits
-           |
-           |
-+-----------------+
-|   EnemyScript   |
+| + Hit() |
+| + Die() |
 +-----------------+
 
 
